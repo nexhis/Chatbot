@@ -11,7 +11,7 @@ background = "User is talking to Chatbot, who is helpful, creative, and very fri
 
 
 def ask(question, chat_log=None):
-    prompt_text = f'{chat_log}{user_name} {question}{bot_name}'
+    prompt_text = f'{chat_log} {user_name} {question} {bot_name}'
     response = openai.Completion.create(
       engine='text-ada-001',
       prompt=prompt_text,
