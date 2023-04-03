@@ -3,7 +3,7 @@ import gradio as gr
 
 
 #if you have OpenAI API key as a string, enable the below
-openai.api_key = "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"
+openai.api_key = "xxxxx"
 
 bot_name = "\nChatbot:"
 user_name = "User:"
