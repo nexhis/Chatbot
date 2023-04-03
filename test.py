@@ -7,7 +7,8 @@ openai.api_key = "xxxxx"
 
 bot_name = "Chatbot"
 user_name = "User"
-background = "User is talking to Chatbot. Chatbot is helpful, creative, and very friendly and knows everything. Chatbot is created by Group3."
+background = "User is talking to Chatbot. Chatbot is helpful, creative, \
+and very friendly and knows everything. Chatbot is created by Group3."
 
 
 def ask(question, chat_log=None):
@@ -15,7 +16,7 @@ def ask(question, chat_log=None):
     response = openai.Completion.create(
       engine='text-babbage-001',
       prompt=prompt_text,
-      temperature=0.9,
+      temperature=0.7,
       max_tokens=256,
       top_p=1,
       frequency_penalty=0,
