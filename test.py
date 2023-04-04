@@ -14,17 +14,17 @@ and very friendly and knows everything. Chatbot is created by Group3."
 def ask(question, chat_log=None):
     prompt_text = f'{chat_log} {user_name}: {question} {bot_name}: '
     response = openai.Completion.create(
-      engine='text-babbage-001',
+      engine='text-davinci-001',
       prompt=prompt_text,
       temperature=0.7,
       max_tokens=256,
       top_p=1,
       frequency_penalty=0,
       presence_penalty=0,
-      stop=["\n", "Chatbot:", "User:"],
+      stop=["Chatbot:", "User:"],
     )
     story = response['choices'][0]['text']
-    return str(story)
+    return str(story)[2:]
 
 
 # Function that clones the GPT-3 model for conversation
